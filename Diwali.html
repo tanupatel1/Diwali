@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Diwali & New Year</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Text -->
+  <div id="overlayTop">
+    <h1>शुभ दीपावली</h1>
+    <h2 class="topText">जय श्री राम</h2>
+  </div>
+
+  <!-- Image Section -->
+  <div id="betweenTextAndDiyas">
+    <img src="https://www.dropbox.com/scl/fi/qkb98t5ylibezxdz5hfjd/PHOTO-2025-10-08-22-34-19.jpg?raw=1" alt="Diwali Image">
+  </div>
+
+  <!-- Diyas and Message -->
+  <div class="center-container">
+    <div class="diya-row">
+      <div class="diya"><div class="flame"></div></div>
+      <div class="diya"><div class="flame"></div></div>
+      <div class="diya"><div class="flame"></div></div>
+      <div class="diya"><div class="flame"></div></div>
+      <div class="diya"><div class="flame"></div></div>
+    </div>
+
+    <div id="belowDiyaText">
+      <h2>✨ आप सभी को दीपावली और नववर्ष की शुभकामनाएँ <br> नूतन वर्षाभिनंदन प्रितेश पटेल और परिवार की ओर से ✨</h2>
+    </div>
+  </div>
+
+  <!-- Fireworks -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Background Music -->
+  <audio id="diwaliAudio" loop controls muted>
+    <source src="https://www.dropbox.com/s/ambberw03fx2g6n7ox6ka/Aayi-Diwali.wav?raw=1" type="audio/wav">
+    <source src="https://www.dropbox.com/s/ambberw03fx2g6n7ox6ka/Aayi-Diwali.mp3?raw=1" type="audio/mpeg">
+  </audio>
+
+  <script>
+    window.addEventListener('click', () => {
+      const audio = document.getElementById('diwaliAudio');
+      audio.muted = false;
+      audio.play();
+    });
+  </script>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
