@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Overlay Top Text */
+#overlayTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+h1 {
+  text-align: center;
+  color: gold;
+  text-shadow: 0 0 25px orange,0 0 50px yellow;
+  margin: 4vh 0 0 0;
+  font-size: 8vw;
+  animation: bannerAnim 2s infinite alternate;
+}
+h2.topText {
+  font-size: 6vw;
+  margin: 1vh 0 0 0;
+  text-align: center;
+  color: gold;
+  text-shadow: 0 0 20px #ffcc88;
+}
+@keyframes bannerAnim {
+  0% { transform: scale(1); color: gold; text-shadow:0 0 25px orange,0 0 50px yellow;}
+  50% { transform: scale(1.05); color: #ffd700; text-shadow:0 0 40px orange,0 0 60px yellow;}
+  100% { transform: scale(1); color: gold; text-shadow:0 0 25px orange,0 0 50px yellow;}
+}
+
+/* Image Between Text and Diyas */
+#betweenTextAndDiyas {
+  position: relative;
+  text-align: center;
+  margin: 30vh 0;
+  z-index: 2;
+}
+#betweenTextAndDiyas img {
+  width: 50vw;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px gold;
+}
+
+/* Centered Diyas and Bottom Text */
+.center-container {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -25%);
+  text-align: center;
+  z-index: 2;
+}
+.diya-row {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  margin-bottom: 1vh;
+}
+.diya {
+  position: relative;
+  width: 8vw;
+  height: 5vw;
+  max-width: 60px;
+  max-height: 40px;
+  background: #b5651d;
+  border-radius: 50% / 60% 60% 40% 40%;
+  box-shadow: inset 0 -5px 10px rgba(0,0,0,0.4);
+}
+.flame {
+  position: absolute;
+  top: -4vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3vw;
+  height: 5vw;
+  max-width: 20px;
+  max-height: 35px;
+  background: radial-gradient(ellipse at center, #ffeb3b 0%, #ff9800 70%, transparent 100%);
+  border-radius: 50%;
+  animation: flicker 1s infinite alternate;
+}
+@keyframes flicker {
+  0% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+  50% { transform: translateX(-50%) scaleY(1.1); opacity: 0.8; }
+  100% { transform: translateX(-50%) scaleY(0.9); opacity: 1; }
+}
+#belowDiyaText h2 {
+  color: #ffcc88;
+  font-size: 3.5vw;
+  max-font-size: 48px;
+  text-shadow:0 0 25px orange,0 0 50px yellow;
+}
+
+/* Fireworks Canvas */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
